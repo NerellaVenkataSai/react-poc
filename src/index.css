@@ -15,3 +15,7 @@ code {
 .header-main {
   background-color: grey !important;
 }
+
+.App {
+  margin-top: 120px;
+}

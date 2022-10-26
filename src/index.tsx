@@ -6,7 +6,10 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Router, BrowserRouter } from 'react-router-dom';
+import { createBrowserHistory } from "history";
 
+// const customHistory = createBrowserHistory();
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -17,12 +20,15 @@ root.render(
         <Toolbar>
           <Button color="inherit">My Logo</Button>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} />
-          <AccountCircleOutlinedIcon sx={{ mr: '8px'}} />
+          <AccountCircleOutlinedIcon sx={{ mr: '8px' }} />
           <LogoutIcon />
         </Toolbar>
       </AppBar>
     </Box>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+
   </React.StrictMode>
 );
 

@@ -1,3 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { AppBar, Box, Toolbar, Typography, Button } from '@mui/material';
@@ -6,8 +9,8 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Router, BrowserRouter } from 'react-router-dom';
-import { createBrowserHistory } from "history";
+import { BrowserRouter } from 'react-router-dom';
+// import { createBrowserHistory } from "history";
 
 // const customHistory = createBrowserHistory();
 const root = ReactDOM.createRoot(

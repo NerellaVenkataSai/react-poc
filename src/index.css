@@ -17,5 +17,43 @@ code {
 }
 
 .App {
-  margin-top: 120px;
+  margin-top: 100px;
+}
+
+.wizard-main {
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.wizard-header, .wizard-body {
+  background-color: #e8e3e3;
+  min-height: 60px;
+}
+
+.wizard-header .step {
+  background-color: #e0a800;
+  margin: 10px;
+  text-align: center;
+}
+
+.wizard-header .step div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wizard-body {
+  margin: 10px 0px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.wizard-body hr{
+  background: red;
+}
+
+.wizard-footer {
+  position: absolute;
+  right: 0px;
 }

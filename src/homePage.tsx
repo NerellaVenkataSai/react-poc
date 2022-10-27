@@ -11,6 +11,7 @@ function HomePage() {
         <Stack direction={'column'} spacing={1} alignItems='center'>
             <Chip onClick={() => history.push(CUSTOMER_LOOKUP)} icon={<ContactsIcon />} label="Customer Lookup" sx={{ justifyContent: 'flex-start', width: '200px' }} />
             <Chip onClick={() => history.push(CUSTOMER_REGISTRATION)} icon={<PageviewIcon />} label="Customer Registration" sx={{ justifyContent: 'flex-start', width: '200px' }} />
+            
         </Stack>
     );
 }

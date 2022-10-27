@@ -1,15 +1,12 @@
 import React, { Suspense } from 'react';
-import logo from './logo.svg';
-import { Route, Router, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import {useLocation} from 'react-router';
 import HomePage from './homePage';
 import './App.css';
 import { HOME_PAGE, CUSTOMER_LOOKUP, CUSTOMER_REGISTRATION } from './routes';
-// import { createBrowserHistory } from "history";
 import CustomerLookup from './customerLookup';
-import CustomerRegistration from './customerRegistration';
+import CustomerRegistration from './customer-registration';
 
-// const customHistory = createBrowserHistory();
 
 function App() {
   const {pathname} = useLocation();
@@ -23,7 +20,6 @@ function App() {
   return (
     <div className="App">
       <Suspense fallback={<p className="text-center">loading...</p>}></Suspense>
-      {/* <Router> */}
         <Switch>
           <Route  path={HOME_PAGE} component={HomePage} />
           <Route  path={CUSTOMER_LOOKUP} component={CustomerLookup} />
@@ -32,7 +28,6 @@ function App() {
           {/* Redirect to homepage when route is unknown */}
           {/* <Route><HomePage /></Route> */}
         </Switch>
-      {/* </Router> */}
     </div>
   );
 }

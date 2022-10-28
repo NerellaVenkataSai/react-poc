@@ -64,3 +64,12 @@ code {
   position: absolute;
   right: 0px;
 }
+
+.navigation {
+  margin-bottom: 10px;
+}
+
+.nav-route {
+  padding-right: 5px;
+  padding-left: 5px;
+}

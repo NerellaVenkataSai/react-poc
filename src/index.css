@@ -25,16 +25,21 @@ code {
   position: relative;
 }
 
-.wizard-header, .wizard-body {
+.wizard-header {
   background-color: #e8e3e3;
   min-height: 60px;
 }
 
 .wizard-header .step {
-  background-color: #e0a800;
+  background-color: grey;
   margin: 10px;
   text-align: center;
 }
+
+.wizard-header .step.active {
+  background-color: #e0a800;
+}
+
 
 .wizard-header .step div {
   height: 100%;
@@ -44,7 +49,9 @@ code {
 }
 
 .wizard-body {
+  background-color: #e8e3e3;
   margin: 10px 0px;
+  min-height: 60vh;
   max-height: 60vh;
   overflow-y: auto;
 }

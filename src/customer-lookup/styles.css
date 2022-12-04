@@ -1,0 +1,45 @@
+.lookup-content {
+    margin: 20px;
+    height: 80vh;
+}
+
+.age-mobile {
+    margin-bottom: 10px;
+}
+.lookup-content .search-card{
+    height: auto;
+    width: 100%;
+}
+
+.lookup-content .result-card {
+    width: 100%;
+    height: 70vh;
+}
+
+.lookup-content .buttons button {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.lookup-content  .buttons {
+    margin: 20px 0;
+}
+
+.lookup-content .buttons .button-primary {
+    background: #FFC107;
+    color: black;
+}
+
+.lookup-content .buttons .button-secondary {
+    border: 1px solid black;
+    color: black;
+}
+
+.result-card thead {
+    background: lightgray;
+}
+
+.result-card td,
+.result-card th{
+    border-right: 0.5px solid grey;
+}

@@ -4,7 +4,7 @@ import { useLocation } from "react-router";
 import HomePage from "./homePage";
 import "./App.css";
 import { HOME_PAGE, CUSTOMER_LOOKUP, CUSTOMER_REGISTRATION, PROMOTER_REGISTRATION } from "./routes";
-import CustomerLookup from "./customerLookup";
+import CustomerLookup from "./customer-lookup/customerLookup";
 import CustomerRegistration from "./customer-registration";
 import PromoterRegistration from './promoter-registration/promoterRegistration';
 

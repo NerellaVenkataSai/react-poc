@@ -8,6 +8,7 @@ import {
   InputLabel,
   Button,
   FormHelperText,
+  Typography
 } from "@mui/material";
 import "./styles.css";
 import { useHistory } from "react-router-dom";
@@ -65,6 +66,9 @@ function PromoterRegistration() {
       alignItems="center"
       className="registration-content"
     >
+      <Typography variant="h5" component="h6">
+            Marketing Promoter Registration
+      </Typography>
       <TextField
         required
         className="field"
@@ -80,6 +84,7 @@ function PromoterRegistration() {
         onBlur={(e) => onBlurHandler(e, "firstName")}
       />
       <TextField
+        required
         className="field"
         label="Last Name"
         variant="standard"
@@ -93,6 +98,7 @@ function PromoterRegistration() {
         onBlur={(e) => onBlurHandler(e, "lastName")}
       />
       <TextField
+        required
         className="field"
         label="Email"
         variant="standard"
@@ -109,8 +115,6 @@ function PromoterRegistration() {
             Country Code
           </InputLabel>
           <Select
-            labelId="demo-simple-select-standard-label"
-            id="demo-simple-select-standard"
             value={
               registerObj["countryCode"] !== "error"
                 ? registerObj["countryCode"]
@@ -119,7 +123,6 @@ function PromoterRegistration() {
             error={registerObj["countryCode"] === "error"}
             onChange={(e) => onChangeHandler(e, "countryCode")}
             onBlur={(e) => onBlurHandler(e, "countryCode")}
-            label="Country Code"
           >
             <MenuItem value="">
               <em>None</em>
@@ -135,6 +138,7 @@ function PromoterRegistration() {
           )}
         </FormControl>
         <TextField
+          required
           label="Mobile Number"
           variant="standard"
           className="mobile"

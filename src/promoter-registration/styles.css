@@ -18,11 +18,6 @@
     color: black;
 }
 
-.registration-content .buttons .button-primary.Mui-disabled {
-    background: rgba(0, 0, 0, 0.12);
-    cursor: not-allowed;
-}
-
 .registration-content .buttons .button-secondary {
     border: 1px solid black;
     color: black;

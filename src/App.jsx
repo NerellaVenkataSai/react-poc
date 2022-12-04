@@ -3,9 +3,10 @@ import { Route, Switch, Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import HomePage from "./homePage";
 import "./App.css";
-import { HOME_PAGE, CUSTOMER_LOOKUP, CUSTOMER_REGISTRATION } from "./routes";
+import { HOME_PAGE, CUSTOMER_LOOKUP, CUSTOMER_REGISTRATION, PROMOTER_REGISTRATION } from "./routes";
 import CustomerLookup from "./customerLookup";
 import CustomerRegistration from "./customer-registration";
+import PromoterRegistration from './promoter-registration/promoterRegistration';
 
 const routes = {
   Home: HOME_PAGE,
@@ -22,7 +23,8 @@ function App() {
   };
   return (
     <div className="App">
-      <div className="container navigation">
+      {/* /** for future navigation header */}
+      {/* <div className="container navigation">
         <div className="row">
           {routesObj[pathname].map((route) => (
             <>
@@ -45,10 +47,11 @@ function App() {
             </>
           ))}
         </div>
-      </div>
+      </div> */}
       <Suspense fallback={<p className="text-center">loading...</p>}></Suspense>
       <Switch>
-        <Route path={HOME_PAGE} component={HomePage} />
+        <Route exact path={HOME_PAGE} component={HomePage} />
+        <Route path={PROMOTER_REGISTRATION} component={PromoterRegistration} />
         <Route path={CUSTOMER_LOOKUP} component={CustomerLookup} />
         <Route path={CUSTOMER_REGISTRATION} component={CustomerRegistration} />
 

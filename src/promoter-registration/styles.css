@@ -1,0 +1,41 @@
+.registration-content .field,
+.registration-content .age-mobile,
+.registration-content .buttons {
+    width: 30%;
+}
+
+
+.age-mobile .age {
+    width: 45%;
+}
+
+.registration-content .buttons {
+    margin: 20px
+}
+
+.registration-content .buttons .button-primary {
+    background: #FFC107;
+    color: black;
+}
+
+.registration-content .buttons .button-primary.Mui-disabled {
+    background: rgba(0, 0, 0, 0.12);
+    cursor: not-allowed;
+}
+
+.registration-content .buttons .button-secondary {
+    border: 1px solid black;
+    color: black;
+}
+
+.registration-content .buttons button {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.select-error {
+    color: #d32f2f !important
+}
+
+
+

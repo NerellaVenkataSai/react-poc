@@ -5,7 +5,7 @@ import HomePage from "./homePage";
 import "./App.css";
 import { HOME_PAGE, CUSTOMER_LOOKUP, CUSTOMER_REGISTRATION, PROMOTER_REGISTRATION } from "./routes";
 import CustomerLookup from "./customer-lookup/customerLookup";
-import CustomerRegistration from "./customer-registration";
+import NewCustomerRegistration from "./customer-registration/new-customer-registration";
 import PromoterRegistration from './promoter-registration/promoterRegistration';
 
 const routes = {
@@ -53,7 +53,7 @@ function App() {
         <Route exact path={HOME_PAGE} component={HomePage} />
         <Route path={PROMOTER_REGISTRATION} component={PromoterRegistration} />
         <Route path={CUSTOMER_LOOKUP} component={CustomerLookup} />
-        <Route path={CUSTOMER_REGISTRATION} component={CustomerRegistration} />
+        <Route path={CUSTOMER_REGISTRATION} component={NewCustomerRegistration} />
 
         {/* Redirect to homepage when route is unknown */}
         {/* <Route><HomePage /></Route> */}

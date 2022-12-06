@@ -3,10 +3,11 @@ import { Route, Switch, Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import HomePage from "./homePage";
 import "./App.css";
-import { HOME_PAGE, CUSTOMER_LOOKUP, CUSTOMER_REGISTRATION, PROMOTER_REGISTRATION } from "./routes";
+import { HOME_PAGE, CUSTOMER_LOOKUP, CUSTOMER_REGISTRATION, PROMOTER_REGISTRATION, REGISTRATION_SUCCESS } from "./routes";
 import CustomerLookup from "./customer-lookup/customerLookup";
 import NewCustomerRegistration from "./customer-registration/new-customer-registration";
 import PromoterRegistration from './promoter-registration/promoterRegistration';
+import SuccessMessage from './success/success'
 
 const routes = {
   Home: HOME_PAGE,
@@ -54,7 +55,7 @@ function App() {
         <Route path={PROMOTER_REGISTRATION} component={PromoterRegistration} />
         <Route path={CUSTOMER_LOOKUP} component={CustomerLookup} />
         <Route path={CUSTOMER_REGISTRATION} component={NewCustomerRegistration} />
-
+        <Route path={REGISTRATION_SUCCESS} component={SuccessMessage} />
         {/* Redirect to homepage when route is unknown */}
         {/* <Route><HomePage /></Route> */}
       </Switch>

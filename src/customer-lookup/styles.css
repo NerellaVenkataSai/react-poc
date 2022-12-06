@@ -1,18 +1,13 @@
 .lookup-content {
-    margin: 20px;
     height: 80vh;
+    overflow: auto;
 }
 
-.age-mobile {
-    margin-bottom: 10px;
-}
 .lookup-content .search-card{
     height: auto;
-    width: 100%;
 }
 
 .lookup-content .result-card {
-    width: 100%;
     height: 70vh;
 }
 

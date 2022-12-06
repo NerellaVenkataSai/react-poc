@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Grid,
   Card,
   CardContent,
   Stack,
@@ -48,35 +49,46 @@ function CustomerLookup() {
 
   console.log("in customer lookup");
   return (
-    <div className="lookup-content">
-      {!results.length ? (
+    <Grid
+      container
+      direction={"row"}
+      justifyContent={"flex-start"}
+      spacing={3}
+      margin={1}
+      className="lookup-content"
+    >
+      <Grid item md={4} sm={10}>
         <Card className="search-card">
           <CardContent>
             <Typography variant="h6" component="h6">
               Customer Lookup
             </Typography>
-            <Stack direction={"row"} spacing={3} className="age-mobile">
-              <FormControl variant="standard" className="age">
-                <InputLabel id="demo-simple-select-standard-label">
-                  Country Code
-                </InputLabel>
-                <Select>
-                  <MenuItem value="">
-                    <em>None</em>
-                  </MenuItem>
-                  <MenuItem value={10}>Ten</MenuItem>
-                  <MenuItem value={20}>Twenty</MenuItem>
-                  <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-              </FormControl>
-              <TextField
-                required
-                label="Mobile Number"
-                variant="standard"
-                className="mobile"
-                fullWidth
-              />
-            </Stack>
+            <Grid container direction={"row"} spacing={1}>
+              <Grid item sm={4}>
+                <FormControl variant="standard" className="age" fullWidth>
+                  <InputLabel id="demo-simple-select-standard-label">
+                    Country Code
+                  </InputLabel>
+                  <Select>
+                    <MenuItem value="">
+                      <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item sm={8}>
+                <TextField
+                  required
+                  label="Mobile Number"
+                  variant="standard"
+                  className="mobile"
+                  fullWidth
+                />
+              </Grid>
+            </Grid>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <MobileDatePicker
                 label="Date of Birth"
@@ -88,12 +100,7 @@ function CustomerLookup() {
                 )}
               />
             </LocalizationProvider>
-            <Stack
-              direction={"column"}
-              alignItems="flex-end"
-              spacing={1}
-              className="buttons"
-            >
+            <Stack direction={"column"} spacing={1} className="buttons" mt={3}>
               <Button
                 className="button-primary"
                 variant="contained"
@@ -104,6 +111,7 @@ function CustomerLookup() {
               <Button
                 className="button-secondary"
                 variant="outlined"
+                fullWidth
                 onClick={() => history.push("/")}
               >
                 Back
@@ -111,12 +119,13 @@ function CustomerLookup() {
             </Stack>
           </CardContent>
         </Card>
-      ) : (
-        ""
-      )}
-      {results.length ? (
+      </Grid>
+      <Grid item md={7} sm={10}>
         <Card className="result-card">
           <CardContent>
+            <Typography variant="h6" component="h6" mb={2}>
+              Results
+            </Typography>
             <TableContainer>
               <Table size="small">
                 <TableHead>
@@ -131,14 +140,18 @@ function CustomerLookup() {
                   {results.map((row) => (
                     <TableRow
                       key={row.name}
-                    //   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                      //   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                     >
                       <TableCell component="th" scope="row">
                         {row.name}
                       </TableCell>
                       <TableCell>{row.address}</TableCell>
                       <TableCell>{row.phone}</TableCell>
-                      <TableCell onClick={() => history.push(CUSTOMER_REGISTRATION)}>Edit</TableCell>
+                      <TableCell
+                        onClick={() => history.push(CUSTOMER_REGISTRATION)}
+                      >
+                        Edit
+                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -146,10 +159,8 @@ function CustomerLookup() {
             </TableContainer>
           </CardContent>
         </Card>
-      ) : (
-        ""
-      )}
-    </div>
+      </Grid>
+    </Grid>
   );
 }
 

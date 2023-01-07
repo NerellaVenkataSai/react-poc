@@ -65,7 +65,7 @@ export default function CapturePhoto(player) {
       track.stop();
     });
 
-    console.log(canvas.toDataURL());
+    console.log('canvas---', canvas);
     setImageDataURL(canvas.toDataURL());
   };
 
@@ -130,9 +130,9 @@ export default function CapturePhoto(player) {
   //     {/* <button onClick={() => switchCamera()}>Switch</button> */}
   //   </div>
   // );
-  return [
+  return {
     initializeMedia, 
     capturePicture, 
     imageDataURL
-  ]
+  }
 }

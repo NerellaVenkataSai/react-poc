@@ -20,14 +20,31 @@ import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { useHistory } from "react-router-dom";
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
+import RegisterModal from './RegisterModal';
 
 function NewCustomerRegistration() {
   const history = useHistory();
+  const [openModal, setOpenModal] = useState(false);
+  const [detailsFromPhoto, setDetailsFromPhoto] = useState();
+
+  /**
+   *    use detailsFromPhoto and set input fields 
+   */
   return (
     <Box margin={5}>
-      <Typography variant="h4" component="h4">
-        Customer Registration
-      </Typography>
+      <RegisterModal openModal={openModal} setOpenModal={setOpenModal} setDetailsFromPhoto={setDetailsFromPhoto} />
+      <Grid container justifyContent={'space-between'}>
+          <Grid item sm={10}>
+            <Typography variant="h4" component="h4">
+              Customer Registration
+            </Typography>
+          </Grid>
+          <Grid item sm={2} style={{textAlign: 'right'}} onClick= {() => setOpenModal(true)}>
+            <PhotoCameraIcon fontSize="large"/>
+          </Grid>
+      </Grid>
+      
       <Box mt={3}>
         <Typography variant="h5" component="h4" marginBottom={3}>
           Personal Information
